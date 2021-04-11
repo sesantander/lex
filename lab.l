@@ -64,6 +64,7 @@ decimal [0-9]*[0-9.][0-9]*([Ee][-+]?[0-9]+)?
 "|="  return ORVAR; 
 "^="  return CIRCUNVAR; 
 "%="  return MODVAR;
+"pave"  return PAVE;
 " "   return printf(" ");
 
 "#".* return COMMENT;
