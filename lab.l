@@ -56,6 +56,7 @@ identificador [_a-zA-Z][_a-zA-Z0-9]*
 "."  return DOT;
 ">>=" return MAYORIZQ2IGUAL;
 "<<=" return  MAYORDER2IGUAL; 
+"elif" return ELIF;
 "+="  return AUMENTAVAR; 
 "-="  return RESTAVAR; 
 "*="  return MULTIPLICAVAR; 

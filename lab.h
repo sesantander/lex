@@ -47,6 +47,7 @@
 #define DOT 47
 #define MAYORIZQ2IGUAL 48
 #define MAYORDER2IGUAL 49
+#define ELIF 50
 #define AUMENTAVAR 51
 #define RESTAVAR 52
 #define MULTIPLICAVAR 53
