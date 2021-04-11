@@ -5,6 +5,8 @@
 
 integer [+-]?[0-9]+
 decimal [0-9]*[0-9.][0-9]*([Ee][-+]?[0-9]+)?
+imaginario ({integer}|{decimal})[jJ]  	
+identificador [_a-zA-Z][_a-zA-Z0-9]*
 
 %%
 "and" return AND;
@@ -64,9 +66,10 @@ decimal [0-9]*[0-9.][0-9]*([Ee][-+]?[0-9]+)?
 "|="  return ORVAR; 
 "^="  return CIRCUNVAR; 
 "%="  return MODVAR;
-" "   return printf(" ");
-
+" "   return ESPACIO;
 "#".* return COMMENT;
+"False"  return FALSES; 
+"True"  return TRUES;
 
 ["'][a-zA-Z0-9]*['"] return STRING;
 
@@ -74,11 +77,13 @@ decimal [0-9]*[0-9.][0-9]*([Ee][-+]?[0-9]+)?
 
 {decimal} return DECIMAL;
 
-[_a-zA-Z][_a-zA-Z0-9]*	return IDENTIFICADOR;
+{identificador}    return IDENTIFICADOR;
 
-({integer}|{decimal})[jJ] return IMAGINARIO;
+{imaginario} return IMAGINARIO;
 
 ({integer})("L"|"l") return LONGINTEGER;
+
+
 
 .		printf("Unexpected character\n");
 

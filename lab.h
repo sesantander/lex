@@ -61,4 +61,7 @@
 #define COMMENT 62
 #define LONGINTEGER 63
 #define IMAGINARIO 64
+#define TRUES 65
+#define FALSES 66
+#define ESPACIO 67
 
