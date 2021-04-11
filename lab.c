@@ -70,8 +70,36 @@ int main(void)
 						printf("Import Syntax error\n");
 					}
 					break;
+				case RETURN:
+					if(vtoken != IDENTIFICADOR){
+						printf("Return Syntax error\n");
+					}
+				case AND:
+					if(vtoken != IDENTIFICADOR && vtoken != PARABRE  && vtoken != CORABRE && vtoken !=TRUES && vtoken !=FALSES){
+						printf("Break Syntax error\n");
+					}
+					break;				
 				case PASS:
-
+				case BREAK:
+					if(vtoken != SEMICOLON){
+						printf("Break Syntax error\n");
+					}
+					break;
+				case FOR:
+					if(vtoken != IDENTIFICADOR && vtoken !=CORABRE && vtoken !=PARABRE){
+						printf("FOR Syntax error\n");
+					}
+					break;				
+				case IN:
+					if(vtoken != IDENTIFICADOR && vtoken !=CORABRE && vtoken !=PARABRE && vtoken !=STRING && ){
+						printf("FOR Syntax error\n");
+					}
+					break;	
+				case ELSE:
+					if(vtoken != IDENTIFICADOR && vtoken !=TRUES && vtoken !=FALSES && vtoken !=NOT && vtoken !=INTEGER && vtoken !=DECIMAL && vtoken !=IMAGINARIO && vtoken !=STRING && vtoken !=CORABRE && vtoken !=PARABRE){
+						printf("IF Syntax error\n");
+					}
+					break;
 				case IF:
 					if(vtoken != IDENTIFICADOR && vtoken !=TRUES && vtoken !=FALSES && vtoken !=NOT && vtoken !=INTEGER && vtoken !=DECIMAL && vtoken !=IMAGINARIO && vtoken !=STRING && vtoken !=CORABRE && vtoken !=PARABRE){
 						printf("IF Syntax error\n");
