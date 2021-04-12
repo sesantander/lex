@@ -71,7 +71,6 @@ identificador [_a-zA-Z][_a-zA-Z0-9]*
 "#".* return COMMENT;
 "False"  return FALSES; 
 "True"  return TRUES;
-
 ["'][a-zA-Z0-9]*['"] return STRING;
 
 {integer}   return INTEGER;
@@ -86,7 +85,7 @@ identificador [_a-zA-Z][_a-zA-Z0-9]*
 
 
 
-.		printf("Unexpected character\n");
+.	return UNDEFINED;
 
 %%
 

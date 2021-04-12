@@ -1125,42 +1125,42 @@ return TRUES;
 	YY_BREAK
 case 63:
 YY_RULE_SETUP
-#line 75 "lab.l"
+#line 74 "lab.l"
 return STRING;
 	YY_BREAK
 case 64:
 YY_RULE_SETUP
-#line 77 "lab.l"
+#line 76 "lab.l"
 return INTEGER;
 	YY_BREAK
 case 65:
 YY_RULE_SETUP
-#line 79 "lab.l"
+#line 78 "lab.l"
 return DECIMAL;
 	YY_BREAK
 case 66:
 YY_RULE_SETUP
-#line 81 "lab.l"
+#line 80 "lab.l"
 return IDENTIFICADOR;
 	YY_BREAK
 case 67:
 YY_RULE_SETUP
-#line 83 "lab.l"
+#line 82 "lab.l"
 return IMAGINARIO;
 	YY_BREAK
 case 68:
 YY_RULE_SETUP
-#line 85 "lab.l"
+#line 84 "lab.l"
 return LONGINTEGER;
 	YY_BREAK
 case 69:
 YY_RULE_SETUP
-#line 89 "lab.l"
-printf("Unexpected character\n");
+#line 88 "lab.l"
+return UNDEFINED;
 	YY_BREAK
 case 70:
 YY_RULE_SETUP
-#line 91 "lab.l"
+#line 90 "lab.l"
 ECHO;
 	YY_BREAK
 #line 1167 "lex.yy.c"
@@ -2168,7 +2168,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 91 "lab.l"
+#line 90 "lab.l"
 
 
 int yywrap(void)
