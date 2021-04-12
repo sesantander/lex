@@ -1198,7 +1198,7 @@ YY_RULE_SETUP
 case 72:
 YY_RULE_SETUP
 #line 92 "lab.l"
-printf("Unexpected character\n");
+return UNDEFINED;
 	YY_BREAK
 case 73:
 YY_RULE_SETUP
