@@ -71,6 +71,8 @@ identificador [_a-zA-Z][_a-zA-Z0-9]*
 "#".* return COMMENT;
 "False"  return FALSES; 
 "True"  return TRUES;
+"""" return COMILLAS;
+"''" return COMILLA;
 
 ["'][a-zA-Z0-9]*['"] return STRING;
 
@@ -85,6 +87,7 @@ identificador [_a-zA-Z][_a-zA-Z0-9]*
 ({integer})("L"|"l") return LONGINTEGER;
 
 
+.$			;
 
 .		printf("Unexpected character\n");
 

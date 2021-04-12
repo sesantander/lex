@@ -65,4 +65,6 @@
 #define TRUES 65
 #define FALSES 66
 #define ESPACIO 67
+#define COMILLAS 68
+#define COMILLA 69
 

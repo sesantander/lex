@@ -56,6 +56,21 @@ int main(void)
                 printf("Syntax error in line %d, but found %s\n", yylineno, yytext);
 				printf("aca %d\n", vtoken);
             }
+			break;
+		case PASS:
+			break;
+		case IN:
+			if(vtoken != IDENTIFICADOR){
+                printf("Syntax error in line %d, but found %s\n", yylineno, yytext);
+				printf("aca %d\n", vtoken);
+            }
+			break;
+		case PRINT:
+			if(vtoken != PARABRE && vtoken != PARABRE ){
+                printf("Syntax error in line %d, but found %s\n", yylineno, yytext);
+				printf("aca %d\n", vtoken);
+            }
+			break;
 		}
 		ntoken = vtoken;
 		printf("2 . El ntoken es %d\n", ntoken);
