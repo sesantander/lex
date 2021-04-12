@@ -9,11 +9,11 @@ extern char* yytext;
 int inArray(char x[], char arr[100][100]);
 int main(void)
 {
-	int ntoken, vtoken, idcont;
+	int ntoken, vtoken, idcont, errorcont;
 	char ids[100][100];
 	idcont= 0;
 	ntoken = yylex();
-	
+	errorcont = 0;
 
 		char str[55] = "";
 
@@ -36,6 +36,7 @@ int main(void)
 		case IDENTIFICADOR:
 			
 			if(vtoken==DECIMAL || strlen(str)!=0){
+				errorcont=errorcont+1;
 				printf("ERROR= %s%s ", str,tokentext);
 				strcpy(str, "");
 			}else{
@@ -59,6 +60,7 @@ int main(void)
 			break;
 		case DECIMAL:			
 			if(vtoken == IDENTIFICADOR || vtoken==DECIMAL || vtoken==IMAGINARIO ){
+				errorcont=errorcont+1;
 				printf("ERROR= %s ", tokentext);	
 			}else{
 				printf("decimal= %s ", tokentext);	
@@ -66,6 +68,7 @@ int main(void)
 			break;
 		case IMAGINARIO:			
 			if(vtoken == IDENTIFICADOR || vtoken==DECIMAL || vtoken==IMAGINARIO ){
+				errorcont=errorcont+1;
 				printf("ERROR= %s ", tokentext);	
 			}else{
 				printf("imaginario= %s ", tokentext);	
@@ -73,6 +76,7 @@ int main(void)
 			break;
 		case LONGINTEGER:			
 			if(vtoken==IDENTIFICADOR){
+				errorcont=errorcont+1;
 				printf("ERROR= %s ", tokentext);	
 			}else{
 				printf("longinteger= %s ", tokentext);	
@@ -80,6 +84,7 @@ int main(void)
 			break;
 	    case IGUAL:
 			if(vtoken != IDENTIFICADOR && vtoken !=TRUES && vtoken !=FALSES && vtoken !=INTEGER && vtoken !=DECIMAL && vtoken !=IMAGINARIO && vtoken !=STRING && vtoken !=CORABRE && vtoken !=PARABRE){
+				errorcont=errorcont+1;
 				printf("ERROR= %s ", tokentext);	
 			}else{
 				printf("asign= %s ", tokentext);	
@@ -276,9 +281,12 @@ int main(void)
         }
 		
 		ntoken = vtoken;
-		
 	}
-
+	printf("\n %d Identificadores \n",idcont);
+	for (int i = 1; i < idcont+1; i++){
+		printf("id%d= %s \n",i,ids[i]);	
+	}	
+	printf("%d Errores \n",errorcont);
 	return 0;
 }
 
