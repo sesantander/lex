@@ -562,8 +562,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "lab.l"
-#line 2 "lab.l"
+#line 1 "LAB01_ROMERO_BARROS.l"
+#line 2 "LAB01_ROMERO_BARROS.l"
 #include "lab.h"
 #line 569 "lex.yy.c"
 #line 570 "lex.yy.c"
@@ -783,7 +783,7 @@ YY_DECL
 		}
 
 	{
-#line 11 "lab.l"
+#line 11 "LAB01_ROMERO_BARROS.l"
 
 #line 789 "lex.yy.c"
 
@@ -844,357 +844,357 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 12 "lab.l"
+#line 12 "LAB01_ROMERO_BARROS.l"
 return AND;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 13 "lab.l"
+#line 13 "LAB01_ROMERO_BARROS.l"
 return ELSE;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 14 "lab.l"
+#line 14 "LAB01_ROMERO_BARROS.l"
 return IS;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 15 "lab.l"
+#line 15 "LAB01_ROMERO_BARROS.l"
 return RETURN;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 16 "lab.l"
+#line 16 "LAB01_ROMERO_BARROS.l"
 return FOR;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 17 "lab.l"
+#line 17 "LAB01_ROMERO_BARROS.l"
 return BREAK;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 18 "lab.l"
+#line 18 "LAB01_ROMERO_BARROS.l"
 return NOT;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 19 "lab.l"
+#line 19 "LAB01_ROMERO_BARROS.l"
 return WHILE;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 20 "lab.l"
+#line 20 "LAB01_ROMERO_BARROS.l"
 return CONTINUE;
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 21 "lab.l"
+#line 21 "LAB01_ROMERO_BARROS.l"
 return IF;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 22 "lab.l"
+#line 22 "LAB01_ROMERO_BARROS.l"
 return OR;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 23 "lab.l"
+#line 23 "LAB01_ROMERO_BARROS.l"
 return DEF;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 24 "lab.l"
+#line 24 "LAB01_ROMERO_BARROS.l"
 return IMPORT;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 25 "lab.l"
+#line 25 "LAB01_ROMERO_BARROS.l"
 return PASS;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 26 "lab.l"
+#line 26 "LAB01_ROMERO_BARROS.l"
 return PRINT;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 27 "lab.l"
+#line 27 "LAB01_ROMERO_BARROS.l"
 return IN;
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 28 "lab.l"
+#line 28 "LAB01_ROMERO_BARROS.l"
 return RANGE;
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 29 "lab.l"
+#line 29 "LAB01_ROMERO_BARROS.l"
 return SUMA;
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 30 "lab.l"
+#line 30 "LAB01_ROMERO_BARROS.l"
 return RESTA;
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 31 "lab.l"
+#line 31 "LAB01_ROMERO_BARROS.l"
 return MULT;
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 32 "lab.l"
+#line 32 "LAB01_ROMERO_BARROS.l"
 return EXP;
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 33 "lab.l"
+#line 33 "LAB01_ROMERO_BARROS.l"
 return DIV;
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 34 "lab.l"
+#line 34 "LAB01_ROMERO_BARROS.l"
 return FDIV;
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 35 "lab.l"
+#line 35 "LAB01_ROMERO_BARROS.l"
 return MOD;
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 36 "lab.l"
+#line 36 "LAB01_ROMERO_BARROS.l"
 return DESBIZQ;
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 37 "lab.l"
+#line 37 "LAB01_ROMERO_BARROS.l"
 return DESBDER;
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 38 "lab.l"
+#line 38 "LAB01_ROMERO_BARROS.l"
 return AND;
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 39 "lab.l"
+#line 39 "LAB01_ROMERO_BARROS.l"
 return OR;
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 40 "lab.l"
+#line 40 "LAB01_ROMERO_BARROS.l"
 return CIRCUN;
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 41 "lab.l"
+#line 41 "LAB01_ROMERO_BARROS.l"
 return COMPLEBI;
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 42 "lab.l"
+#line 42 "LAB01_ROMERO_BARROS.l"
 return LT;
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 43 "lab.l"
+#line 43 "LAB01_ROMERO_BARROS.l"
 return GT;
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 44 "lab.l"
+#line 44 "LAB01_ROMERO_BARROS.l"
 return LET;
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 45 "lab.l"
+#line 45 "LAB01_ROMERO_BARROS.l"
 return GET;
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 46 "lab.l"
+#line 46 "LAB01_ROMERO_BARROS.l"
 return COMP;
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 47 "lab.l"
+#line 47 "LAB01_ROMERO_BARROS.l"
 return DIFERENTE;
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 48 "lab.l"
+#line 48 "LAB01_ROMERO_BARROS.l"
 return DIFERENTE2;
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 49 "lab.l"
+#line 49 "LAB01_ROMERO_BARROS.l"
 return	PARABRE;
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 50 "lab.l"
+#line 50 "LAB01_ROMERO_BARROS.l"
 return 	PARCIERRA;
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 51 "lab.l"
+#line 51 "LAB01_ROMERO_BARROS.l"
 return	CORABRE;
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 52 "lab.l"
+#line 52 "LAB01_ROMERO_BARROS.l"
 return	CORCIERRA;
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 53 "lab.l"
+#line 53 "LAB01_ROMERO_BARROS.l"
 return	IGUAL;
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 54 "lab.l"
+#line 54 "LAB01_ROMERO_BARROS.l"
 return SEMICOLON;
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 55 "lab.l"
+#line 55 "LAB01_ROMERO_BARROS.l"
 return COMA;
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 56 "lab.l"
+#line 56 "LAB01_ROMERO_BARROS.l"
 return COLON;
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 57 "lab.l"
+#line 57 "LAB01_ROMERO_BARROS.l"
 return DOT;
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 58 "lab.l"
+#line 58 "LAB01_ROMERO_BARROS.l"
 return MAYORIZQ2IGUAL;
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 59 "lab.l"
+#line 59 "LAB01_ROMERO_BARROS.l"
 return  MAYORDER2IGUAL; 
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 60 "lab.l"
+#line 60 "LAB01_ROMERO_BARROS.l"
 return ELIF;
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 61 "lab.l"
+#line 61 "LAB01_ROMERO_BARROS.l"
 return AUMENTAVAR; 
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
-#line 62 "lab.l"
+#line 62 "LAB01_ROMERO_BARROS.l"
 return RESTAVAR; 
 	YY_BREAK
 case 52:
 YY_RULE_SETUP
-#line 63 "lab.l"
+#line 63 "LAB01_ROMERO_BARROS.l"
 return MULTIPLICAVAR; 
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
-#line 64 "lab.l"
+#line 64 "LAB01_ROMERO_BARROS.l"
 return DIVIDEVAR; 
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 65 "lab.l"
+#line 65 "LAB01_ROMERO_BARROS.l"
 return EXPVAR;
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
-#line 66 "lab.l"
+#line 66 "LAB01_ROMERO_BARROS.l"
 return FDIVVAR; 
 	YY_BREAK
 case 56:
 YY_RULE_SETUP
-#line 67 "lab.l"
+#line 67 "LAB01_ROMERO_BARROS.l"
 return  ANDVAR;
 	YY_BREAK
 case 57:
 YY_RULE_SETUP
-#line 68 "lab.l"
+#line 68 "LAB01_ROMERO_BARROS.l"
 return ORVAR; 
 	YY_BREAK
 case 58:
 YY_RULE_SETUP
-#line 69 "lab.l"
+#line 69 "LAB01_ROMERO_BARROS.l"
 return CIRCUNVAR; 
 	YY_BREAK
 case 59:
 YY_RULE_SETUP
-#line 70 "lab.l"
+#line 70 "LAB01_ROMERO_BARROS.l"
 return MODVAR;
 	YY_BREAK
 case 60:
 YY_RULE_SETUP
-#line 71 "lab.l"
+#line 71 "LAB01_ROMERO_BARROS.l"
 return ESPACIO;
 	YY_BREAK
 case 61:
 YY_RULE_SETUP
-#line 72 "lab.l"
+#line 72 "LAB01_ROMERO_BARROS.l"
 return COMMENT;
 	YY_BREAK
 case 62:
 YY_RULE_SETUP
-#line 73 "lab.l"
+#line 73 "LAB01_ROMERO_BARROS.l"
 return FALSES; 
 	YY_BREAK
 case 63:
 YY_RULE_SETUP
-#line 74 "lab.l"
+#line 74 "LAB01_ROMERO_BARROS.l"
 return TRUES;
 	YY_BREAK
 case 64:
 YY_RULE_SETUP
-#line 75 "lab.l"
+#line 75 "LAB01_ROMERO_BARROS.l"
 return COMILLAS;
 	YY_BREAK
 case 65:
 YY_RULE_SETUP
-#line 76 "lab.l"
+#line 76 "LAB01_ROMERO_BARROS.l"
 return COMILLA;
 	YY_BREAK
 case 66:
 YY_RULE_SETUP
-#line 79 "lab.l"
+#line 79 "LAB01_ROMERO_BARROS.l"
 return STRING;
 	YY_BREAK
 case 67:
 YY_RULE_SETUP
-#line 81 "lab.l"
+#line 81 "LAB01_ROMERO_BARROS.l"
 return INTEGER;
 	YY_BREAK
 case 68:
 YY_RULE_SETUP
-#line 83 "lab.l"
+#line 83 "LAB01_ROMERO_BARROS.l"
 return DECIMAL;
 	YY_BREAK
 case 69:
 YY_RULE_SETUP
-#line 85 "lab.l"
+#line 85 "LAB01_ROMERO_BARROS.l"
 return IDENTIFICADOR;
 	YY_BREAK
 case 70:
 YY_RULE_SETUP
-#line 87 "lab.l"
+#line 87 "LAB01_ROMERO_BARROS.l"
 return IMAGINARIO;
 	YY_BREAK
 case 71:
 YY_RULE_SETUP
-#line 89 "lab.l"
+#line 89 "LAB01_ROMERO_BARROS.l"
 return LONGINTEGER;
 	YY_BREAK
 case 72:
@@ -1202,17 +1202,17 @@ case 72:
 (yy_c_buf_p) = yy_cp -= 1;
 YY_DO_BEFORE_ACTION; /* set up yytext again */
 YY_RULE_SETUP
-#line 92 "lab.l"
+#line 92 "LAB01_ROMERO_BARROS.l"
 return ENDOFLINE;
 	YY_BREAK
 case 73:
 YY_RULE_SETUP
-#line 94 "lab.l"
+#line 94 "LAB01_ROMERO_BARROS.l"
 return UNDEFINED;
 	YY_BREAK
 case 74:
 YY_RULE_SETUP
-#line 96 "lab.l"
+#line 96 "LAB01_ROMERO_BARROS.l"
 ECHO;
 	YY_BREAK
 #line 1219 "lex.yy.c"
@@ -2220,7 +2220,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 96 "lab.l"
+#line 96 "LAB01_ROMERO_BARROS.l"
 
 
 int yywrap(void)
