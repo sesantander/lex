@@ -1,75 +1,259 @@
 #include <stdio.h>
+#include <string.h>
 #include "lab.h"
 
 extern int yylex();
 extern int yylineno;
 extern char* yytext;
 
+int inArray(char x[], char arr[100][100]);
 int main(void)
 {
-	int ntoken, vtoken;
-	
+	int ntoken, vtoken, idcont;
+	char ids[100][100];
+	idcont= 0;
 	ntoken = yylex();
 	
 	while(ntoken) {
-		printf("--------------------------\n");
-		printf("El ntoken es %d y el texto es %s\n", ntoken,yytext);
-		
+		char tokentext[strlen(yytext)];
+		strcpy(tokentext, yytext);
 		vtoken = yylex();
-		
 		while(vtoken==ESPACIO){
 			vtoken = yylex();
 		}
-		
 
 		switch (ntoken) {
 		
-		case ESPACIO:
-			printf("entro un espacio\n");
-			break;		
 		case IDENTIFICADOR:			
 			if(vtoken==DECIMAL){
-				printf("Error unexpected %s\n",  yytext);
-			}			
+				printf("error= %s ", tokentext);	
+			}else{
+				if (inArray(tokentext,ids)==0){
+					idcont=idcont+1;
+					strcpy(ids[idcont], tokentext);
+					printf("id%d= %s ",idcont, tokentext);	
+				}else{
+					printf("id%d= %s ",inArray(tokentext,ids), tokentext);	
+				}
+			}		
 			break;
 		case INTEGER:			
 			if(vtoken == IDENTIFICADOR){
-				printf("Error unexpected %s\n",  yytext);
-							 
-			}			
+				printf("error= %s ", tokentext);	
+			}else{
+				printf("entero= %s ", tokentext);	
+			}		
 			break;
 		case DECIMAL:			
 			if(vtoken == IDENTIFICADOR || vtoken==DECIMAL || vtoken==IMAGINARIO ){
-				printf("Error unexpected %s\n",  yytext);
-							 
-			}			
+				printf("error= %s ", tokentext);	
+			}else{
+				printf("decimal= %s ", tokentext);	
+			}		
 			break;
 		case IMAGINARIO:			
 			if(vtoken == IDENTIFICADOR || vtoken==DECIMAL || vtoken==IMAGINARIO ){
-				printf("Error unexpected %s\n",  yytext);
-							 
+				printf("error= %s ", tokentext);	
+			}else{
+				printf("imaginario= %s ", tokentext);	
 			}			
 			break;
 		case LONGINTEGER:			
 			if(vtoken==IDENTIFICADOR){
-				printf("Error unexpected %s\n",  yytext);
-							 
+				printf("error= %s ", tokentext);	
+			}else{
+				printf("longinteger= %s ", tokentext);	
 			}			
 			break;
-		
 	    case IGUAL:
 			if(vtoken != IDENTIFICADOR && vtoken !=TRUES && vtoken !=FALSES && vtoken !=INTEGER && vtoken !=DECIMAL && vtoken !=IMAGINARIO && vtoken !=STRING && vtoken !=CORABRE && vtoken !=PARABRE){
-				printf("Error unexpected %s\n",  yytext);
+				printf("error= %s ", tokentext);	
+			}else{
+				printf("asign= %s ", tokentext);	
 			}
 			break;
-		case UNDEFINED:
-            printf("Unexpected Token\n");
+		case STRING:	
+				printf("string= %s ", tokentext);		
+			break;
+		case IF:
+				printf("IF ");	
             break;
+        case ELIF:
+				printf("ELIF ");
+            break;
+        case IMPORT:
+				printf("IMPORT ");	
+            break;
+		case DEF:
+				printf("DEF ");	
+            break;
+        case PASS:
+				printf("PASS ");	
+            break;
+
+        case PRINT:
+				printf("PRINT ");	
+            break;
+
+        case RETURN:
+				printf("PRINT ");	
+            break;
+        case AND:
+				printf("AND ");	
+            break;
+        case BREAK:
+				printf("BREAK ");	
+            break;
+        case FOR:
+				printf("FOR ");	
+            break;
+        case IN:
+				printf("IN ");	
+            break;
+        case ELSE:
+				printf("ELSE ");	
+            break;
+        case PARABRE:
+				printf("parabre= %s ", tokentext);		
+            break;
+		case PARCIERRA:
+				printf("parcierra= %s ", tokentext);	
+            break;
+        case CORABRE:
+				printf("corabre= %s ", tokentext);	
+            break;
+		case CORCIERRA:
+				printf("corcierra= %s ", tokentext);	
+            break;
+		case SUMA:
+				printf("suma= %s ", tokentext);	
+            break;
+		case RESTA:
+				printf("resta= %s ", tokentext);	
+            break;
+		case MULT:
+				printf("mult= %s ", tokentext);	
+            break;
+		case EXP:
+				printf("exp= %s ", tokentext);	
+            break;
+		case DIV:
+				printf("div= %s ", tokentext);	
+            break;
+		case FDIV:
+				printf("fdiv= %s ", tokentext);	
+            break;
+		case MOD:
+				printf("mod= %s ", tokentext);	
+            break;
+		case DESBIZQ:
+				printf("desbizq= %s ", tokentext);	
+            break;
+		case DESBDER:
+				printf("desbder= %s ", tokentext);	
+            break;
+		case CIRCUN:
+				printf("circun= %s ", tokentext);	
+            break;
+		case COMPLEBI:
+				printf("complebi= %s ", tokentext);	
+            break;
+		case LT:
+				printf("lt= %s ", tokentext);	
+            break;
+		case GT:
+				printf("gt= %s ", tokentext);	
+            break;
+		case LET:
+				printf("let= %s ", tokentext);	
+            break;
+		case GET:
+				printf("get= %s ", tokentext);	
+            break;
+		case COMP:
+				printf("comp= %s ", tokentext);	
+            break;
+		case DIFERENTE:
+				printf("diferente= %s ", tokentext);	
+            break;
+		case DIFERENTE2:
+				printf("diferente= %s ", tokentext);	
+            break;
+		case SEMICOLON:
+				printf("semicolon= %s ", tokentext);	
+            break;
+		case COMA:
+				printf("coma= %s ", tokentext);	
+            break;
+		case DOT:
+				printf("punto= %s ", tokentext);	
+            break;
+		case MAYORIZQ2IGUAL:
+				printf("mayorizqigual= %s ", tokentext);	
+            break;
+		case MAYORDER2IGUAL:
+				printf("mayorderigual= %s ", tokentext);	
+            break;
+		case AUMENTAVAR:
+				printf("aumentavar= %s ", tokentext);	
+            break;
+		case RESTAVAR:
+				printf("restavar= %s ", tokentext);	
+            break;
+		case MULTIPLICAVAR:
+				printf("multiplicavar= %s ", tokentext);	
+            break;
+		case DIVIDEVAR:
+				printf("dividevar= %s ", tokentext);	
+            break;
+		case EXPVAR:
+				printf("expvar= %s ", tokentext);	
+            break;
+		case FDIVVAR:
+				printf("fdivvar= %s ", tokentext);	
+            break;
+		case ANDVAR:
+				printf("andvar= %s ", tokentext);	
+            break;
+		case ORVAR:
+				printf("orvar= %s ", tokentext);	
+            break;
+		case CIRCUNVAR:
+				printf("circunvar= %s ", tokentext);	
+            break;
+		case MODVAR:
+				printf("modvar= %s ", tokentext);	
+            break;
+		case FALSES:
+				printf("FALSE");	
+            break;
+		case TRUES:
+				printf("TRUE");	
+            break;
+		case COMILLAS:
+				printf("comillas= %s ", tokentext);	
+            break;
+		case COMILLA:
+				printf("comilla= %s ", tokentext);	
+            break;
+		case UNDEFINED:
+            printf("%s ", tokentext);
+            break;
+
         }
 		
 		ntoken = vtoken;
 		
 	}
 
+	return 0;
+}
+
+int inArray(char x[], char arr[100][100]){
+	for (size_t i = 0; i < 100; i++){
+		if(strcmp(arr[i],x) == 0 ){
+			return i;
+		}
+	}
 	return 0;
 }

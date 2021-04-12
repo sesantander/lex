@@ -26,7 +26,7 @@
 #define MOD 25
 #define DESBIZQ 26
 #define DESBDER 27
-#define IGUAL2 28
+#define COMP 28
 #define IN 29
 #define CIRCUN 30 
 #define COMPLEBI 31
@@ -35,7 +35,7 @@
 #define LET 34
 #define GET 35
 #define DIFERENTE 37
-#define DIFERENTEOTRAVES 38
+#define DIFERENTE2 38
 #define PARCIERRA 39
 #define CORABRE 40 
 #define PARABRE 41
@@ -67,4 +67,5 @@
 #define ESPACIO 67
 #define COMILLAS 68
 #define COMILLA 69
-#define UNDEFINED 70
+#define RANGE 70
+#define UNDEFINED 71
