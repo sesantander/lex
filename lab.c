@@ -10,7 +10,10 @@ int main(void)
 	int ntoken, vtoken;
 	
 	ntoken = yylex();
-	
+	// while(ntoken) {
+	// 	printf("%d\n", ntoken);
+	// 	ntoken = yylex();
+	// }
 	while(ntoken) {
 		printf("--------------------------\n");
 		printf("El ntoken es %d y el texto es %s\n", ntoken,yytext);
@@ -56,6 +59,7 @@ int main(void)
 							 
 			}			
 			break;
+		
 		
 	    case IGUAL:
 			if(vtoken != IDENTIFICADOR && vtoken !=TRUES && vtoken !=FALSES && vtoken !=INTEGER && vtoken !=DECIMAL && vtoken !=IMAGINARIO && vtoken !=STRING && vtoken !=CORABRE && vtoken !=PARABRE){
