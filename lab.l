@@ -3,7 +3,7 @@
 %}
 
 
-integer [+-]?[0-9]+
+integer [-]?[0-9]+
 decimal [0-9]*[0-9.][0-9]*([Ee][-+]?[0-9]+)?
 imaginario ({integer}|{decimal})[jJ]  	
 identificador [_a-zA-Z][_a-zA-Z0-9]*
@@ -25,6 +25,7 @@ identificador [_a-zA-Z][_a-zA-Z0-9]*
 "pass" return PASS;
 "print" return PRINT;
 "in" return IN;
+"range" return RANGE;
 "+" return SUMA;
 "-" return RESTA;
 "*" return MULT;
@@ -42,9 +43,9 @@ identificador [_a-zA-Z][_a-zA-Z0-9]*
 ">" return GT;
 "<=" return LET;
 ">=" return GET;
-"==" return IGUAL2;
+"==" return COMP;
 "!=" return DIFERENTE;
-"<>" return DIFERENTEOTRAVES;
+"<>" return DIFERENTE2;
 "(" return	PARABRE;
 ")" return 	PARCIERRA;
 "[" return	CORABRE;
@@ -74,7 +75,8 @@ identificador [_a-zA-Z][_a-zA-Z0-9]*
 """" return COMILLAS;
 "''" return COMILLA;
 
-["'][a-zA-Z0-9]*['"] return STRING;
+
+[’‘"'][A-Za-züÜáéíóúáéíóúÁÉÍÓÚ0-9 ]*[‘'"’] return STRING;
 
 {integer}   return INTEGER;
 
@@ -87,7 +89,7 @@ identificador [_a-zA-Z][_a-zA-Z0-9]*
 ({integer})("L"|"l") return LONGINTEGER;
 
 
-.$			;
+.$			return ENDOFLINE;
 
 .	return UNDEFINED;
 
